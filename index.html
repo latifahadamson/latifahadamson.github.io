@@ -97,5 +97,13 @@
   </div>
 
   <script src="assets/js/main.js"></script>
+  <script>
+document.addEventListener("scroll", () => {
+  document.querySelectorAll("section, header, footer").forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) el.classList.add("visible");
+  });
+});
+</script>
 </body>
 </html>
